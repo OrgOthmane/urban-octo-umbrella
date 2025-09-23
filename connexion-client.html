@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Connexion - Inscription</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        background: linear-gradient(
+          135deg,
+          var(--text-color),
+          var(--secondary-color)
+        );
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 20px;
+      }
+
+      :root {
+        --primary-color: #2563eb;
+        --primary-hover: #1d4ed8;
+        --secondary-color: #64748b;
+        --background-color: #f8fafc;
+        --card-background: #ffffff;
+        --text-color: #1e293b;
+        --border-color: #e2e8f0;
+        --error-color: red;
+        --success-color: green;
+      }
+
+      .container {
+        background: var(--card-background);
+        border-radius: 12px;
+        box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+        padding: 40px;
+        width: 100%;
+        max-width: 500px;
+        position: relative;
+      }
+
+      .header {
+        text-align: center;
+        margin-bottom: 30px;
+      }
+
+      .header h1 {
+        color: var(--text-color);
+        font-size: 28px;
+        font-weight: 700;
+        margin-bottom: 8px;
+      }
+
+      .header p {
+        color: var(--secondary-color);
+        font-size: 16px;
+      }
+
+      .form-group {
+        margin-bottom: 20px;
+      }
+
+      .form-row {
+        display: flex;
+        gap: 15px;
+      }
+
+      .form-row .form-group {
+        flex: 1;
+      }
+
+      label {
+        display: block;
+        margin-bottom: 6px;
+        color: var(--text-color);
+        font-weight: 500;
+        font-size: 14px;
+      }
+
+      input[type="text"],
+      input[type="email"],
+      input[type="tel"],
+      textarea {
+        width: 100%;
+        padding: 12px 16px;
+        border: 2px solid var(--border-color);
+        border-radius: 8px;
+        font-size: 16px;
+        background-color: #ffffff;
+      }
+
+      textarea {
+        resize: vertical;
+        min-height: 80px;
+      }
+
+      .submit-btn {
+        width: 100%;
+        background: var(--primary-color);
+        color: white;
+        padding: 14px 20px;
+        border: none;
+        border-radius: 8px;
+        font-size: 16px;
+        font-weight: 600;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        margin-top: 10px;
+      }
+
+      .submit-btn:hover {
+        background: var(--primary-hover);
+        transform: translateY(-1px);
+        box-shadow: 0 10px 20px rgba(37, 99, 235, 0.2);
+      }
+
+      .footer-text {
+        text-align: center;
+        margin-top: 20px;
+        color: var(--secondary-color);
+        font-size: 14px;
+      }
+
+      .footer-text a {
+        color: var(--primary-color);
+        text-decoration: none;
+        font-weight: 500;
+      }
+
+      .footer-text a:hover {
+        text-decoration: underline;
+      }
+
+      @media (max-width: 600px) {
+        .container {
+          padding: 30px 20px;
+          margin: 10px;
+        }
+
+        .form-row {
+          flex-direction: column;
+          gap: 0;
+        }
+
+        .header h1 {
+          font-size: 24px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="header">
+        <h1>Inscription</h1>
+        <p style="text-decoration: underline">
+          Créez votre compte professionnel
+        </p>
+      </div>
+
+      <form id="Form">
+        <div class="form-row">
+          <div class="form-group">
+            <label for="nom">Nom :</label>
+            <input type="text" id="nom" name="nom" required />
+          </div>
+          <div class="form-group">
+            <label for="prenom">Prénom :</label>
+            <input type="text" id="prenom" name="prenom" required />
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="cni">Numéro CNI :</label>
+          <input type="text" id="cni" name="cni" required />
+        </div>
+
+        <div class="form-group">
+          <label for="email">Adresse Email :</label>
+          <input type="email" id="email" name="email" required />
+        </div>
+
+        <div class="form-group">
+          <label for="telephone">Numéro de Téléphone :</label>
+          <input type="tel" id="telephone" name="telephone" required />
+        </div>
+
+        <div class="form-group">
+          <label for="adresse">Adresse Complète :</label>
+          <textarea
+            id="adresse"
+            name="adresse"
+            placeholder="Numéro, rue, ville, code postal"
+            required
+          ></textarea>
+        </div>
+
+        <button type="submit" class="submit-btn">Créer mon compte</button>
+      </form>
+
+      <div class="footer-text">Déjà inscrit ? <a href="#">Se connecter</a></div>
+    </div>
+  </body>
+</html>
