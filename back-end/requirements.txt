@@ -1,0 +1,27 @@
+# Application de gestion du courrier administratif
+# Dépendances Python backend
+
+# Framework web
+Flask==3.0.0
+Flask-CORS==6.0.2
+Flask-JWT-Extended==4.7.4
+Flask-Limiter==4.1.1
+
+# Base de données
+mysql-connector-python==9.2.0
+
+# Sécurité
+bcrypt==5.0.0
+
+# Configuration
+python-dotenv==1.0.0
+
+# Génération PDF
+fpdf2==2.8.7
+
+# Scheduler pour nettoyage automatique des notifications expirées
+APScheduler==3.10.4
+
+# Tests et développement
+pytest==9.0.3
+pytest-cov==7.1.0
